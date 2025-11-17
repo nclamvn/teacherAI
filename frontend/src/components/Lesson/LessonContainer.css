@@ -1,0 +1,62 @@
+.lesson-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  height: 100%;
+  overflow-y: auto;
+  padding: var(--space-6);
+}
+
+.lesson-card {
+  padding: var(--space-8);
+  background: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-2xl);
+  backdrop-filter: var(--glass-blur);
+}
+
+/* Skeleton loading state */
+.skeleton {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeleton-header {
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+}
+
+.skeleton-content {
+  height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-3);
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: var(--space-12);
+}
+
+.empty-text {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.empty-subtext {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+}

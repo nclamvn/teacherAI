@@ -1,0 +1,206 @@
+/* ===== 3D AVATAR CANVAS ===== */
+
+.teacher-avatar-3d-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 24px;
+  overflow: visible;
+  background: radial-gradient(
+    circle at top center,
+    rgba(0, 100, 255, 0.1) 0%,
+    rgba(110, 58, 255, 0.08) 30%,
+    rgba(5, 5, 9, 0.95) 70%
+  );
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtle Blue Glow - No Rainbow */
+.teacher-avatar-3d-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 27px;
+  padding: 3px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 100, 255, 0.5),
+    rgba(110, 58, 255, 0.5)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Subtle Outer Glow */
+.teacher-avatar-3d-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 32px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 100, 255, 0.3) 0%,
+    transparent 70%
+  );
+  filter: blur(12px);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 9;
+}
+
+/* Canvas element */
+.teacher-avatar-3d-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  outline: none;
+}
+
+/* ===== LOADING OVERLAY ===== */
+
+.avatar-loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle at center,
+    rgba(15, 23, 42, 0.9) 0%,
+    rgba(5, 5, 9, 0.95) 100%
+  );
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Hide loading when canvas is ready */
+.teacher-avatar-3d-wrapper:has(canvas) .avatar-loading-overlay {
+  opacity: 0;
+  animation: fadeOutLoading 0.5s ease-out 1s forwards;
+}
+
+@keyframes fadeOutLoading {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ===== LOADING SPINNER ===== */
+
+.avatar-loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(148, 163, 184, 0.2);
+  border-top-color: var(--accent-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== AVATAR GLOW EFFECT ===== */
+
+.teacher-avatar-3d-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160%;
+  height: 40%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 100, 255, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1.05);
+  }
+}
+
+/* ===== STATE-BASED EFFECTS ===== */
+
+/* Speaking State - Brighter glow */
+.teacher-avatar-3d-wrapper[data-state="speaking"]::after {
+  background: linear-gradient(
+    135deg,
+    rgba(110, 58, 255, 0.7),
+    rgba(0, 100, 255, 0.7)
+  );
+}
+
+.teacher-avatar-3d-wrapper[data-state="speaking"]::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(110, 58, 255, 0.4) 0%,
+    transparent 70%
+  );
+  opacity: 0.8;
+  filter: blur(12px);
+}
+
+/* Celebrating State - Green success glow */
+.teacher-avatar-3d-wrapper[data-state="celebrating"]::after {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 195, 90, 0.8),
+    rgba(0, 100, 255, 0.7)
+  );
+}
+
+.teacher-avatar-3d-wrapper[data-state="celebrating"]::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 195, 90, 0.5) 0%,
+    transparent 70%
+  );
+  opacity: 0.9;
+  filter: blur(16px);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .teacher-avatar-3d-wrapper {
+    height: 240px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-avatar-3d-wrapper {
+    height: 200px;
+    border-radius: 16px;
+  }
+
+  .avatar-loading-spinner {
+    width: 36px;
+    height: 36px;
+    border-width: 2px;
+  }
+}

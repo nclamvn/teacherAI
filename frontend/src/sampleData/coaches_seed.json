@@ -1,0 +1,42 @@
+{
+  "coaches": [
+    {
+      "coach_id": "ivy",
+      "name": "Coach Ivy",
+      "tagline_en": "Your calm and encouraging English companion.",
+      "tagline_vi": "Người đồng hành nhẹ nhàng, luôn động viên bạn.",
+      "avatar_variant": "female_study",
+      "voices": {
+        "en": {
+          "provider": "openai",
+          "voice_id": "alloy",
+          "style": "warm_friendly"
+        },
+        "vi": {
+          "provider": "openai",
+          "voice_id": "viet_female_01",
+          "style": "clear_explainer"
+        }
+      }
+    },
+    {
+      "coach_id": "leo",
+      "name": "Coach Leo",
+      "tagline_en": "Your lively coach for natural conversations.",
+      "tagline_vi": "Huấn luyện viên năng động cho hội thoại tự nhiên.",
+      "avatar_variant": "male_casual",
+      "voices": {
+        "en": {
+          "provider": "openai",
+          "voice_id": "alloy_male",
+          "style": "casual_conversation"
+        },
+        "vi": {
+          "provider": "openai",
+          "voice_id": "viet_male_01",
+          "style": "simple_explainer"
+        }
+      }
+    }
+  ]
+}

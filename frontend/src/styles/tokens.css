@@ -1,0 +1,311 @@
+/* -----------------------------------------------------
+   LUMINOSITY APPLE UI THEME — 2025
+   High-contrast, VisionOS-inspired design
+------------------------------------------------------ */
+
+:root {
+  /* ===== BACKGROUND ===== */
+  --bg-base: #F5F7FA;
+  --bg-card: #FFFFFF;
+  --bg-elevated: #FFFFFF;
+
+  /* ===== TEXT (High Contrast) ===== */
+  --text-primary: #0A0C0F;
+  --text-secondary: #2E3238;
+  --text-tertiary: #5B606A;
+  --text-inverse: #FFFFFF;
+
+  /* Legacy text mappings for compatibility */
+  --color-text: #0A0C0F;
+  --color-text-primary: #0A0C0F;
+  --color-text-secondary: #2E3238;
+  --color-text-tertiary: #5B606A;
+  --color-text-light: #FFFFFF;
+  --color-text-muted: #5B606A;
+
+  /* ===== ACCENT COLORS ===== */
+  --accent-primary: #0064FF;     /* Luminous Blue */
+  --accent-secondary: #6E3AFF;   /* Electric Purple */
+  --accent-success: #00C35A;     /* Green */
+  --accent-warning: #FFB300;     /* Amber */
+  --accent-danger: #E63946;      /* Red */
+
+  /* Legacy accent mappings */
+  --color-primary: #0064FF;
+  --color-secondary: #6E3AFF;
+  --color-accent-primary: #0064FF;
+  --color-accent-secondary: #6E3AFF;
+  --color-success: #00C35A;
+  --color-warning: #FFB300;
+  --color-error: #E63946;
+  --color-info: #0064FF;
+
+  /* ===== ICONS ===== */
+  --icon-primary: #0E1115;
+  --icon-secondary: #434A55;
+  --icon-on-accent: #FFFFFF;
+  --icon-danger: #E63946;
+  --icon-success: #00C35A;
+
+  /* ===== BORDERS & SHADOWS ===== */
+  --border-subtle: rgba(15, 23, 42, 0.06);
+  --border-strong: rgba(15, 23, 42, 0.12);
+  --border-accent: rgba(0, 100, 255, 0.2);
+
+  /* VisionOS-style shadows */
+  --shadow-soft: 0 4px 18px rgba(0, 0, 0, 0.08),
+                 inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+  --shadow-strong: 0 8px 28px rgba(0, 0, 0, 0.12),
+                   inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  --shadow-elevated: 0 12px 38px rgba(0, 0, 0, 0.15),
+                     inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+
+  /* Legacy shadow mappings */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.20);
+
+  /* ===== GRADIENTS ===== */
+  --gradient-accent: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  --gradient-bg: var(--bg-base); /* Override old gradient */
+
+  /* Button gradients */
+  --btn-primary: linear-gradient(135deg, #0064FF, #6E3AFF);
+  --btn-secondary: #FFFFFF;
+
+  /* ===== GLASS EFFECTS ===== */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-blur: blur(22px);
+
+  /* Legacy glass mappings */
+  --color-glass-bg: rgba(255, 255, 255, 0.7);
+  --color-glass-border: rgba(15, 23, 42, 0.08);
+  --color-glass-hover: rgba(255, 255, 255, 0.9);
+
+  /* ===== RADIUS ===== */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* ===== SPACING ===== */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-primary: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+
+  /* Font weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Line heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* ===== TRANSITIONS ===== */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slowest: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ===== Z-INDEX ===== */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+
+  /* ===== AVATAR SPECIFICS ===== */
+  --avatar-size-sm: 80px;
+  --avatar-size-md: 120px;
+  --avatar-size-lg: 200px;
+  --avatar-size-xl: 280px;
+  --avatar-ring-width: 4px;
+  --avatar-glow-size: 60px;
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Premium Apple Glass Morphism - Ultra Transparent */
+.glass,
+.card,
+.panel {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 8px 32px rgba(31, 38, 135, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Inner light reflection - Very subtle */
+.glass::before,
+.card::before,
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 100%
+  );
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content appears above inner light */
+.glass > *,
+.card > *,
+.panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-hover:hover,
+.card:hover {
+  border-color: rgba(0, 100, 255, 0.3);
+  box-shadow:
+    0 12px 48px rgba(0, 100, 255, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(0, 100, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.card-elevated {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.85) 100%
+  );
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(24px) saturate(200%);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--btn-primary);
+  color: var(--text-inverse);
+  border-radius: var(--radius-full);
+  padding: 10px 18px;
+  border: none;
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 6px 14px rgba(0, 100, 255, 0.35);
+}
+
+.btn-primary svg {
+  color: var(--icon-on-accent);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0, 100, 255, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: #FFFFFF;
+  color: var(--text-primary);
+  border-radius: var(--radius-full);
+  padding: 9px 16px;
+  border: 1px solid var(--border-strong);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.btn-secondary svg {
+  color: var(--icon-primary);
+}
+
+.btn-secondary:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 4px 12px rgba(0, 100, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.btn-tertiary {
+  background: transparent;
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--border-subtle);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-tertiary:hover {
+  background: var(--bg-card);
+  border-color: var(--border-strong);
+}
+
+/* Icons */
+.icon {
+  color: var(--icon-primary);
+}
+
+.icon-secondary {
+  color: var(--icon-secondary);
+}
+
+.icon-on-accent {
+  color: var(--icon-on-accent);
+}

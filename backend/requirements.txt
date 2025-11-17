@@ -1,0 +1,15 @@
+# FastAPI & Dependencies
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-dotenv==1.0.1
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# OpenAI
+openai==1.57.2
+
+# CORS
+python-multipart==0.0.19
+
+# Database (for future)
+sqlalchemy==2.0.36

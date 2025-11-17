@@ -1,0 +1,614 @@
+/* ==========================================
+   HOME PAGE
+   ========================================== */
+
+.home-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-5);
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   HEADER / GREETING
+   ========================================== */
+
+.home-header {
+  margin-bottom: var(--space-8);
+}
+
+.greeting-section {
+  text-align: center;
+  padding: var(--space-6) 0;
+}
+
+.greeting {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  background: linear-gradient(135deg, var(--text-primary), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+}
+
+.tagline {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  font-weight: var(--font-medium);
+}
+
+/* ==========================================
+   CONTENT SECTIONS
+   ========================================== */
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.home-section {
+  animation: slideInUp 0.5s ease;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-header {
+  margin-bottom: var(--space-6);
+}
+
+.section-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  font-weight: var(--font-medium);
+}
+
+/* ==========================================
+   MISSIONS GRID
+   ========================================== */
+
+.missions-section {
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  backdrop-filter: var(--glass-blur) saturate(180%);
+  box-shadow: var(--shadow-soft);
+}
+
+.missions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-5);
+}
+
+.mission-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.mission-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-accent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.mission-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-strong);
+}
+
+.mission-card:hover::before {
+  opacity: 1;
+}
+
+/* Mission Color Variants - Luminosity Style */
+.mission-card.mission-purple,
+.mission-card.mission-orange,
+.mission-card.mission-blue,
+.mission-card.mission-teal {
+  background: var(--bg-card);
+}
+
+.mission-number {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 100, 255, 0.1);
+  border: 2px solid rgba(0, 100, 255, 0.2);
+  border-radius: 50%;
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--accent-primary);
+}
+
+.mission-icon {
+  margin-bottom: var(--space-4);
+  color: var(--icon-primary);
+  font-size: var(--text-3xl);
+}
+
+.mission-content {
+  flex: 1;
+  margin-bottom: var(--space-4);
+}
+
+.mission-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.01em;
+}
+
+.mission-description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  font-weight: var(--font-medium);
+}
+
+.mission-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-glass-border);
+  margin-bottom: var(--space-4);
+}
+
+.mission-duration {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.mission-count {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-medium);
+}
+
+.mission-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-3) var(--space-5);
+  background: var(--btn-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--text-inverse);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-soft);
+}
+
+.mission-cta svg {
+  color: var(--icon-on-accent);
+}
+
+.mission-cta:hover {
+  filter: var(--btn-hover-brighten);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+
+.missions-empty {
+  text-align: center;
+  padding: var(--space-12) var(--space-6);
+  color: var(--color-text-secondary);
+}
+
+.missions-empty svg {
+  color: var(--color-accent-primary);
+  margin-bottom: var(--space-4);
+}
+
+.missions-empty p {
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+}
+
+/* ==========================================
+   DAILY FOCUS CARD
+   ========================================== */
+
+.daily-focus-card {
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: var(--glass-blur);
+}
+
+.daily-focus-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-strong);
+}
+
+.focus-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.focus-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 100, 255, 0.1);
+  border: 2px solid rgba(0, 100, 255, 0.2);
+  border-radius: var(--radius-xl);
+  color: var(--accent-primary);
+}
+
+.focus-title-group {
+  flex: 1;
+}
+
+.focus-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.focus-subtitle {
+  font-size: var(--text-base);
+  color: var(--color-accent-primary);
+  font-weight: var(--font-semibold);
+}
+
+.focus-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.focus-words {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.focus-label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+}
+
+.focus-words-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.focus-word-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  background: rgba(0, 100, 255, 0.08);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+}
+
+.focus-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: var(--radius-lg);
+}
+
+.focus-tip svg {
+  flex-shrink: 0;
+  color: rgb(251, 191, 36);
+  margin-top: 2px;
+}
+
+.focus-tip p {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+.focus-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-glass-border);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================
+   MINI PROGRESS
+   ========================================== */
+
+.mini-progress {
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: var(--glass-blur);
+}
+
+.progress-header {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.progress-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.progress-subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  background: var(--bg-card);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-strong);
+}
+
+/* Stat Color Variants - Luminosity Style */
+.stat-card.stat-purple .stat-icon {
+  color: var(--accent-secondary);
+}
+
+.stat-card.stat-green .stat-icon {
+  color: var(--accent-success);
+}
+
+.stat-card.stat-blue .stat-icon {
+  color: var(--accent-primary);
+}
+
+.stat-card.stat-orange .stat-icon {
+  color: var(--accent-warning);
+}
+
+.stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 100, 255, 0.1);
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.stat-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.stat-value {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+}
+
+.stat-unit {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+}
+
+.stat-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-medium);
+}
+
+.progress-encouragement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(22, 163, 74, 0.1));
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: var(--radius-lg);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.progress-encouragement svg {
+  color: rgb(34, 197, 94);
+}
+
+.progress-encouragement p {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.btn-view-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4) var(--space-6);
+  margin-top: var(--space-6);
+  background: var(--btn-primary);
+  border: none;
+  border-radius: var(--radius-full);
+  color: var(--text-inverse);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 6px 14px rgba(0, 100, 255, 0.35);
+}
+
+.btn-view-progress svg {
+  color: var(--icon-on-accent);
+}
+
+.btn-view-progress:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 100, 255, 0.45);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: var(--space-4) var(--space-4);
+  }
+
+  .greeting {
+    font-size: var(--text-3xl);
+  }
+
+  .tagline {
+    font-size: var(--text-base);
+  }
+
+  .missions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-value {
+    font-size: var(--text-2xl);
+  }
+
+  .section-title {
+    font-size: var(--text-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .focus-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}

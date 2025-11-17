@@ -1,0 +1,434 @@
+{
+  "lessons": [
+    {
+      "lesson_id": "food-polite-01",
+      "title": "Ordering Food Politely",
+      "topic": "ordering_food",
+      "estimated_minutes": 10,
+      "difficulty_level": "beginner",
+      "steps": [
+        {
+          "type": "warmup",
+          "text": "I'd like the grilled salmon, please.",
+          "translation_vi": "Tôi muốn món cá hồi nướng, làm ơn.",
+          "audio_url": "/audio/food-polite-01/warmup-salmon.mp3"
+        },
+        {
+          "type": "dialogue",
+          "lines": [
+            {
+              "speaker": "Waiter",
+              "text": "Good evening! Are you ready to order?",
+              "audio_url": "/audio/food-polite-01/line-1.mp3"
+            },
+            {
+              "speaker": "Customer",
+              "text": "Yes, I'd like the grilled salmon with steamed vegetables, please.",
+              "audio_url": "/audio/food-polite-01/line-2.mp3"
+            },
+            {
+              "speaker": "Waiter",
+              "text": "Of course. Would you like anything to drink?",
+              "audio_url": "/audio/food-polite-01/line-3.mp3"
+            },
+            {
+              "speaker": "Customer",
+              "text": "A glass of water, please.",
+              "audio_url": "/audio/food-polite-01/line-4.mp3"
+            }
+          ],
+          "key_phrases": [
+            {
+              "english": "I'd like ... , please.",
+              "vietnamese": "Tôi muốn ... , làm ơn.",
+              "example": "I'd like the grilled salmon, please."
+            },
+            {
+              "english": "Would you like anything to drink?",
+              "vietnamese": "Bạn có muốn uống gì không?",
+              "example": "Would you like anything to drink?"
+            }
+          ]
+        },
+        {
+          "type": "mcq",
+          "question": "Complete the sentence: \"I'd _____ the grilled fish, please.\"",
+          "options": ["want", "like", "need", "take"],
+          "correct_answer": 1,
+          "explanation": "We say \"I'd like\" to sound polite when ordering food."
+        },
+        {
+          "type": "build_sentence",
+          "prompt": "Translate into English: \"Cho tôi món salad trộn, làm ơn.\"",
+          "words": ["I'd", "like", "the", "mixed", "salad", "please"],
+          "correct_order": [0, 1, 2, 3, 4, 5]
+        },
+        {
+          "type": "speaking_prompt",
+          "prompt": "Imagine you are at a restaurant. Order a main dish and a drink politely.",
+          "suggested_sentences": [
+            "I'd like the chicken soup and a glass of water, please.",
+            "I'd like the beef steak with salad, and an orange juice, please."
+          ],
+          "speaking_lab_topic": "ordering_food"
+        }
+      ]
+    },
+    {
+      "lesson_id": "coffee-shop-01",
+      "title": "At the Coffee Shop",
+      "topic": "coffee_shop",
+      "estimated_minutes": 10,
+      "difficulty_level": "beginner",
+      "steps": [
+        {
+          "type": "warmup",
+          "text": "Can I get a latte to go, please?",
+          "translation_vi": "Cho tôi một ly latte mang đi, làm ơn.",
+          "audio_url": "/audio/coffee-shop-01/warmup-latte.mp3"
+        },
+        {
+          "type": "dialogue",
+          "lines": [
+            {
+              "speaker": "Barista",
+              "text": "Hi there! What can I get for you today?",
+              "audio_url": "/audio/coffee-shop-01/line-1.mp3"
+            },
+            {
+              "speaker": "Customer",
+              "text": "Can I get an iced latte with oat milk, please?",
+              "audio_url": "/audio/coffee-shop-01/line-2.mp3"
+            },
+            {
+              "speaker": "Barista",
+              "text": "Sure! Small, medium, or large?",
+              "audio_url": "/audio/coffee-shop-01/line-3.mp3"
+            },
+            {
+              "speaker": "Customer",
+              "text": "Medium, please. And to go.",
+              "audio_url": "/audio/coffee-shop-01/line-4.mp3"
+            }
+          ],
+          "key_phrases": [
+            {
+              "english": "What can I get for you?",
+              "vietnamese": "Tôi có thể phục vụ bạn gì?",
+              "example": "Hi there! What can I get for you today?"
+            },
+            {
+              "english": "Can I get ... , please?",
+              "vietnamese": "Cho tôi ... , làm ơn.",
+              "example": "Can I get an iced latte with oat milk, please?"
+            },
+            {
+              "english": "Small, medium, or large?",
+              "vietnamese": "Cỡ nhỏ, vừa hay lớn?",
+              "example": "Small, medium, or large?"
+            },
+            {
+              "english": "To go / For here",
+              "vietnamese": "Mang đi / Uống tại chỗ",
+              "example": "Medium, please. And to go."
+            }
+          ]
+        },
+        {
+          "type": "mcq",
+          "question": "Which sentence is the most natural and polite?",
+          "options": [
+            "Give me one latte.",
+            "I want one latte.",
+            "Can I get a latte, please?",
+            "Latte for me."
+          ],
+          "correct_answer": 2,
+          "explanation": "\"Can I get a latte, please?\" sounds polite and natural in a coffee shop."
+        },
+        {
+          "type": "build_sentence",
+          "prompt": "Translate: \"Tôi muốn một ly cappuccino uống tại chỗ.\"",
+          "words": ["Can", "I", "get", "a", "cappuccino", "for", "here", "please"],
+          "correct_order": [0, 1, 2, 3, 4, 5, 6, 7]
+        },
+        {
+          "type": "speaking_prompt",
+          "prompt": "Order a drink at your favorite coffee shop. Say the drink, the size, and whether it is for here or to go.",
+          "suggested_sentences": [
+            "Can I get a large iced Americano to go, please?",
+            "Can I get a small cappuccino for here, please?"
+          ],
+          "speaking_lab_topic": "coffee_shop"
+        }
+      ]
+    },
+    {
+      "lesson_id": "small-talk-01",
+      "title": "Making Small Talk",
+      "topic": "small_talk",
+      "estimated_minutes": 10,
+      "difficulty_level": "beginner",
+      "steps": [
+        {
+          "type": "warmup",
+          "text": "How's your day going so far?",
+          "translation_vi": "Hôm nay của bạn thế nào rồi?",
+          "audio_url": "/audio/small-talk-01/warmup-day.mp3"
+        },
+        {
+          "type": "dialogue",
+          "lines": [
+            {
+              "speaker": "Anna",
+              "text": "Hi Sarah! How's your day going?",
+              "audio_url": "/audio/small-talk-01/line-1.mp3"
+            },
+            {
+              "speaker": "Sarah",
+              "text": "Pretty good, thanks! Just grabbing a quick coffee. How about you?",
+              "audio_url": "/audio/small-talk-01/line-2.mp3"
+            },
+            {
+              "speaker": "Anna",
+              "text": "Not bad! Just finished some errands nearby.",
+              "audio_url": "/audio/small-talk-01/line-3.mp3"
+            },
+            {
+              "speaker": "Sarah",
+              "text": "Nice! Well, enjoy the rest of your day!",
+              "audio_url": "/audio/small-talk-01/line-4.mp3"
+            }
+          ],
+          "key_phrases": [
+            {
+              "english": "How's your day going?",
+              "vietnamese": "Hôm nay của bạn thế nào?",
+              "example": "Hi Sarah! How's your day going?"
+            },
+            {
+              "english": "Pretty good, thanks!",
+              "vietnamese": "Khá tốt, cảm ơn!",
+              "example": "Pretty good, thanks! Just grabbing a quick coffee."
+            },
+            {
+              "english": "How about you?",
+              "vietnamese": "Còn bạn thì sao?",
+              "example": "Just grabbing a quick coffee. How about you?"
+            },
+            {
+              "english": "Enjoy the rest of your day!",
+              "vietnamese": "Chúc bạn có ngày vui vẻ!",
+              "example": "Well, enjoy the rest of your day!"
+            }
+          ]
+        },
+        {
+          "type": "mcq",
+          "question": "Your friend asks \"How's it going?\" What is the best response?",
+          "options": [
+            "I am good.",
+            "Pretty good, thanks! How about you?",
+            "Yes, I'm fine.",
+            "Good, thank you very much for asking me."
+          ],
+          "correct_answer": 1,
+          "explanation": "Good choice! \"Pretty good, thanks! How about you?\" sounds natural and friendly. Asking back keeps the conversation going - rất lịch sự và tự nhiên."
+        },
+        {
+          "type": "build_sentence",
+          "prompt": "Translate: \"Hôm nay của bạn thế nào?\"",
+          "words": ["How's", "your", "day", "going", "today"],
+          "correct_order": [0, 1, 2, 3, 4]
+        },
+        {
+          "type": "speaking_prompt",
+          "prompt": "Imagine you meet a friend at a coffee shop. Greet them and ask how their day is going.",
+          "suggested_sentences": [
+            "Hi! How's your day going?",
+            "Hey! How's everything going today?"
+          ],
+          "speaking_lab_topic": "small_talk"
+        }
+      ]
+    },
+    {
+      "lesson_id": "taxi-01",
+      "title": "Taking a Taxi",
+      "topic": "taxi_ride",
+      "estimated_minutes": 10,
+      "difficulty_level": "beginner",
+      "steps": [
+        {
+          "type": "warmup",
+          "text": "Could you take me to the airport, please?",
+          "translation_vi": "Bạn có thể đưa tôi đến sân bay được không?",
+          "audio_url": "/audio/taxi-01/warmup-airport.mp3"
+        },
+        {
+          "type": "dialogue",
+          "lines": [
+            {
+              "speaker": "Driver",
+              "text": "Hi! Where are you headed?",
+              "audio_url": "/audio/taxi-01/line-1.mp3"
+            },
+            {
+              "speaker": "Passenger",
+              "text": "Could you take me to Central Station, please?",
+              "audio_url": "/audio/taxi-01/line-2.mp3"
+            },
+            {
+              "speaker": "Driver",
+              "text": "Sure, no problem. It'll be about 15 minutes.",
+              "audio_url": "/audio/taxi-01/line-3.mp3"
+            },
+            {
+              "speaker": "Passenger",
+              "text": "Great, thank you!",
+              "audio_url": "/audio/taxi-01/line-4.mp3"
+            }
+          ],
+          "key_phrases": [
+            {
+              "english": "Where are you headed?",
+              "vietnamese": "Bạn đi đâu?",
+              "example": "Hi! Where are you headed?"
+            },
+            {
+              "english": "Could you take me to...?",
+              "vietnamese": "Bạn có thể đưa tôi đến... được không?",
+              "example": "Could you take me to Central Station, please?"
+            },
+            {
+              "english": "It'll be about... minutes.",
+              "vietnamese": "Sẽ mất khoảng... phút.",
+              "example": "It'll be about 15 minutes."
+            },
+            {
+              "english": "No problem.",
+              "vietnamese": "Không vấn đề gì.",
+              "example": "Sure, no problem."
+            }
+          ]
+        },
+        {
+          "type": "mcq",
+          "question": "You want to go to the train station. What should you say to the taxi driver?",
+          "options": [
+            "I want train station.",
+            "Take me train station.",
+            "Could you take me to the train station, please?",
+            "Go to train station now."
+          ],
+          "correct_answer": 2,
+          "explanation": "Perfect! \"Could you take me to the train station, please?\" is polite and natural - đúng cách người bản xứ nói."
+        },
+        {
+          "type": "build_sentence",
+          "prompt": "Translate: \"Bạn có thể đưa tôi đến sân bay không?\"",
+          "words": ["Could", "you", "take", "me", "to", "the", "airport"],
+          "correct_order": [0, 1, 2, 3, 4, 5, 6]
+        },
+        {
+          "type": "speaking_prompt",
+          "prompt": "Imagine you are in a taxi. Tell the driver where you want to go and ask how long it will take.",
+          "suggested_sentences": [
+            "Could you take me to the shopping mall, please? How long will it take?",
+            "I'd like to go to the hotel downtown, please. About how many minutes?"
+          ],
+          "speaking_lab_topic": "taxi_ride"
+        }
+      ]
+    },
+    {
+      "lesson_id": "shopping-01",
+      "title": "Shopping for Clothes",
+      "topic": "shopping",
+      "estimated_minutes": 10,
+      "difficulty_level": "beginner",
+      "steps": [
+        {
+          "type": "warmup",
+          "text": "How much is this shirt?",
+          "translation_vi": "Cái áo này bao nhiêu tiền?",
+          "audio_url": "/audio/shopping-01/warmup-shirt.mp3"
+        },
+        {
+          "type": "dialogue",
+          "lines": [
+            {
+              "speaker": "Customer",
+              "text": "Hi! How much is this blue shirt?",
+              "audio_url": "/audio/shopping-01/line-1.mp3"
+            },
+            {
+              "speaker": "Shop Assistant",
+              "text": "That one is $25. Would you like to try it on?",
+              "audio_url": "/audio/shopping-01/line-2.mp3"
+            },
+            {
+              "speaker": "Customer",
+              "text": "Yes, please. Do you have it in size medium?",
+              "audio_url": "/audio/shopping-01/line-3.mp3"
+            },
+            {
+              "speaker": "Shop Assistant",
+              "text": "Of course! The fitting room is right over there.",
+              "audio_url": "/audio/shopping-01/line-4.mp3"
+            }
+          ],
+          "key_phrases": [
+            {
+              "english": "How much is this?",
+              "vietnamese": "Cái này bao nhiêu tiền?",
+              "example": "How much is this blue shirt?"
+            },
+            {
+              "english": "Would you like to try it on?",
+              "vietnamese": "Bạn có muốn thử không?",
+              "example": "Would you like to try it on?"
+            },
+            {
+              "english": "Do you have it in size...?",
+              "vietnamese": "Bạn có size... không?",
+              "example": "Do you have it in size medium?"
+            },
+            {
+              "english": "The fitting room",
+              "vietnamese": "Phòng thử đồ",
+              "example": "The fitting room is right over there."
+            }
+          ]
+        },
+        {
+          "type": "mcq",
+          "question": "You want to try on a jacket before buying. What should you say?",
+          "options": [
+            "I want wear this.",
+            "Give me try this jacket.",
+            "Can I try this on, please?",
+            "Where I try jacket?"
+          ],
+          "correct_answer": 2,
+          "explanation": "Excellent! \"Can I try this on, please?\" is polite and natural when shopping - đúng cách hỏi khi mua sắm."
+        },
+        {
+          "type": "build_sentence",
+          "prompt": "Translate: \"Cái áo này bao nhiêu tiền?\"",
+          "words": ["How", "much", "is", "this", "shirt"],
+          "correct_order": [0, 1, 2, 3, 4]
+        },
+        {
+          "type": "speaking_prompt",
+          "prompt": "Imagine you are shopping for clothes. Ask about the price, the size, and if you can try it on.",
+          "suggested_sentences": [
+            "How much is this jacket? Do you have it in size large? Can I try it on?",
+            "Excuse me, how much are these jeans? Can I try them on, please?"
+          ],
+          "speaking_lab_topic": "shopping"
+        }
+      ]
+    }
+  ]
+}

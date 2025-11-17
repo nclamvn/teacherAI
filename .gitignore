@@ -1,0 +1,10 @@
+# Không commit file môi trường
+.env
+backend/.env
+
+# Node
+node_modules
+dist
+build
+.vite
+.DS_Store

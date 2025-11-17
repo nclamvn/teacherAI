@@ -1,0 +1,236 @@
+.coach-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  background: transparent;
+  height: auto;
+}
+
+/* Coach Card - Avatar + Header - Ultra Glass */
+.coach-card {
+  padding: var(--space-6);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-2xl);
+  box-shadow:
+    0 8px 32px rgba(31, 38, 135, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  position: relative;
+  overflow: hidden;
+}
+
+.coach-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.coach-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.coach-header {
+  text-align: center;
+}
+
+.coach-name {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  margin: 0 0 var(--space-2) 0;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.coach-subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  margin: 0;
+  font-weight: var(--font-medium);
+}
+
+/* Avatar Section */
+.coach-avatar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--space-6) 0;
+  min-height: 350px;
+}
+
+/* Stats - Ultra Glass */
+.coach-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: var(--radius-2xl);
+  box-shadow:
+    0 8px 32px rgba(31, 38, 135, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.stat-item:hover {
+  background: var(--bg-card);
+  border-color: var(--border-strong);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-strong);
+}
+
+.stat-icon {
+  font-size: var(--text-2xl);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(76, 156, 255, 0.12);
+  border-radius: var(--radius-lg);
+  color: var(--icon-primary);
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.stat-label {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: var(--space-1);
+  font-weight: var(--font-semibold);
+}
+
+/* Coach Message - Ultra Glass */
+.coach-message {
+  padding: var(--space-6);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-2xl);
+  box-shadow:
+    0 8px 32px rgba(31, 38, 135, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(26px) saturate(180%);
+  -webkit-backdrop-filter: blur(26px) saturate(180%);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.coach-message::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 100%
+  );
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.coach-message > * {
+  position: relative;
+  z-index: 1;
+}
+
+.coach-message:hover {
+  border-color: rgba(0, 100, 255, 0.35);
+  box-shadow:
+    0 12px 48px rgba(0, 100, 255, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.message-bubble {
+  position: relative;
+}
+
+.message-bubble::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  font-size: 48px;
+  color: var(--color-accent-primary);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.message-text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+  font-style: italic;
+  font-weight: var(--font-medium);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.coach-panel {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.stat-item {
+  animation: slideInLeft 0.6s ease-out backwards;
+}
+
+.stat-item:nth-child(1) { animation-delay: 0.1s; }
+.stat-item:nth-child(2) { animation-delay: 0.2s; }
+.stat-item:nth-child(3) { animation-delay: 0.3s; }
