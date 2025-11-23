@@ -1,12 +1,14 @@
 import Icon from '../ui/Icon';
+import { BRAND } from '../../constants/branding';
 import './LiveTalk.css';
 
 const LiveTalkHeader = ({ coachName, onClearChat, onEndSession, sessionStats, hasMessages }) => {
   return (
     <div className="live-talk-header">
       <div className="header-left">
-        <h2 className="header-title">Live Talk with Coach {coachName}</h2>
-        <p className="header-subtitle">Free conversation practice</p>
+        <h2 className="header-title">Live Talk with {BRAND.NAME}</h2>
+        <p className="header-subtitle">{BRAND.LIVE_TALK_SUBTITLE_EN}</p>
+        <p className="header-subtitle-vi">{BRAND.LIVE_TALK_SUBTITLE_VI}</p>
       </div>
 
       <div className="header-actions">

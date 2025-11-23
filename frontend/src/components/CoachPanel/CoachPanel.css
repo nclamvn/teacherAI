@@ -63,6 +63,15 @@
   font-weight: var(--font-medium);
 }
 
+.coach-subtitle-vi {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  margin: var(--space-1) 0 0 0;
+  font-weight: var(--font-normal);
+  font-style: italic;
+  opacity: 0.85;
+}
+
 /* Avatar Section */
 .coach-avatar-section {
   display: flex;

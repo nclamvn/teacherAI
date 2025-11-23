@@ -11,6 +11,7 @@ import LiveTalkContainer from '../../components/LiveTalk/LiveTalkContainer';
 import TimelinePanel from '../../components/Timeline/TimelinePanel';
 import WeakWordsPanel from '../../components/WeakWords/WeakWordsPanel';
 import { useAvatarState } from '../../hooks/useAvatarState';
+import { BRAND } from '../../constants/branding';
 import '../../App.css';
 
 const StudioPage = () => {
@@ -134,8 +135,8 @@ const StudioPage = () => {
       {/* Footer */}
       <footer className="app-footer">
         <div className="footer-inner">
-          <span>© 2025 Teacher AI - Lâm Nguyễn</span>
-          <span>Được hỗ trợ bởi OpenAI</span>
+          <span>{BRAND.COPYRIGHT}</span>
+          <span>{BRAND.POWERED_BY_EN} | {BRAND.POWERED_BY_VI}</span>
         </div>
       </footer>
     </div>
