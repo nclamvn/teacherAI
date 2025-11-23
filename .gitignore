@@ -8,3 +8,13 @@ dist
 build
 .vite
 .DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vs/
+.vscode/
+.idea/
