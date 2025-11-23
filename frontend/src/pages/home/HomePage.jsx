@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useProfile } from '../../contexts/ProfileContext';
 import { useUserProgress } from '../../contexts/UserProgressContext';
 import { useLesson } from '../../contexts/LessonContext';
+import { BRAND } from '../../constants/branding';
 import TodayMissions from './TodayMissions';
 import DailyFocus from './DailyFocus';
 import MiniProgress from './MiniProgress';
@@ -147,10 +148,12 @@ const HomePage = () => {
       {/* Header */}
       <div className="home-header">
         <div className="greeting-section">
+          <p className="welcome-badge">{BRAND.WELCOME_VI}</p>
           <h1 className="greeting">
             {getGreeting()}, {profile?.name || 'Learner'}! 👋
           </h1>
-          <p className="tagline">Ready to level up your English today?</p>
+          <p className="tagline">{BRAND.HOME_DESCRIPTION_EN}</p>
+          <p className="tagline-vi">{BRAND.HOME_DESCRIPTION_VI}</p>
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import Icon from '../ui/Icon';
 import AvatarContainer from '../Avatar/AvatarContainer';
+import { BRAND } from '../../constants/branding';
 import './CoachPanel.css';
 
 const CoachPanel = ({ avatarState, onAvatarStateChange }) => {
@@ -8,8 +9,9 @@ const CoachPanel = ({ avatarState, onAvatarStateChange }) => {
       {/* Coach Card - Avatar + Header */}
       <div className="coach-card glass">
         <div className="coach-header">
-          <h3 className="coach-name gradient-text">Coach Ivy</h3>
-          <p className="coach-subtitle">Your personal English companion</p>
+          <h3 className="coach-name gradient-text">{BRAND.NAME}</h3>
+          <p className="coach-subtitle">{BRAND.TAGLINE_EN}</p>
+          <p className="coach-subtitle-vi">{BRAND.TAGLINE_VI}</p>
         </div>
 
         <div className="coach-avatar-section">

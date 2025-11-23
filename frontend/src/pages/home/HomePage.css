@@ -52,6 +52,27 @@
   font-weight: var(--font-medium);
 }
 
+.tagline-vi {
+  font-size: var(--text-base);
+  color: var(--text-tertiary);
+  font-weight: var(--font-normal);
+  font-style: italic;
+  margin-top: var(--space-2);
+  opacity: 0.9;
+}
+
+.welcome-badge {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--text-inverse);
+  margin-bottom: var(--space-3);
+  letter-spacing: 0.02em;
+}
+
 /* ==========================================
    CONTENT SECTIONS
    ========================================== */
